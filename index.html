@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Practice for Kids</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learn Arithmetic with Fun!</h1>
+    </header>
+    <main>
+        <!-- Settings Section -->
+        <section id="settings">
+            <h2>Quiz Settings</h2>
+            <label for="difficulty">Select Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <label for="numQuestions">Number of Questions:</label>
+            <input type="number" id="numQuestions" value="5" min="1" max="20">
+
+            <label for="operations">Operations:</label>
+            <select id="operations" multiple>
+                <option value="addition">Addition</option>
+                <option value="subtraction">Subtraction</option>
+                <option value="multiplication">Multiplication</option>
+                <option value="division">Division</option>
+            </select>
+
+            <button onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <!-- Questionnaire Section -->
+        <section id="questionnaire" style="display:none;">
+            <h2>Question</h2>
+            <p id="question-text"></p>
+            <input type="number" id="answer" placeholder="Enter your answer">
+            <button onclick="submitAnswer()">Submit</button>
+            <button onclick="showHint()">Hint</button>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" style="display:none;">
+            <h2>Quiz Results</h2>
+            <p id="score"></p>
+            <p id="percentage"></p>
+            <div id="achievements"></div>
+            <button onclick="restartQuiz()">Try Again</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
